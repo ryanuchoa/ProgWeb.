@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Conversão de Tipos </title>
+    <style type="text/css">
+        .container{
+            width: 100vw;
+            height: 100vh;
+/*            border: 1px solid blue;*/
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        form{
+             border: 1px solid blue;
+             padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <form>
+       <p> Primeiro dígito : <input type="number" id="digito1"> </p> 
+       <p> Segundo dígito : <input type="number" id="digito2"> </p> 
+       <p> <button type="button" onclick="Calculadora(1)"> Soma </button> </p>
+       <p> <button type="button" onclick="Calculadora(2)"> Multiplicar </button> </p>
+       <p> <button type="button" onclick="Calculadora(3)"> Dividir </button> </p>
+       <p> <button type="button" onclick="Calculadora(4)"> subtração </button> </p
+       <p> Resultado:<input type="text" id="result" readonly></p>
+    </form>
+    </div>
+    <script>
+    function Calculadora(param){
+            let digito1 = document.getElementById("digito1").value; 
+            let digito2 = document.getElementById("digito2").value;
+        let resultado; 
+        if(param == 1){
+            resultado = parseFloat(digito1) + parseFloat(digito2);
+        }else if(param == 2){
+            resultado = parseFloat(digito1) * parseFloat(digito2);
+        }else if(param == 3){
+            resultado = parseFloat(digito1) / parseFloat(digito2);
+        }else if(param == 4){
+            resultado = parseFloat(digito1) - parseFloat(digito2);
+        } document.getElementById("result").value = resultado; 
+    }
+    </script>
+</body>
+</html>
+
+$egundo!!1nfo
