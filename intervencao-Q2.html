@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> produtos</title>
+</head>
+<body>
+<script>
+	function mostrarEstoque(estoqueI,vendasF){
+			for (let i = 0; i < chaves.length; i++){
+				estoqueFinal[chaves[i]] = estoque[chaves[i]] - vendas[chaves[i]];
+			}
+}
+	
+
+	const estoque = {
+		celular: 150,
+		foneOuvido: 55,
+		Pendrive: 37, 
+		CaixaAudio:28, 
+		Tablet: 32,
+		CarregadorPortatil: 29
+	};
+	const vendas = { 
+		celular: 38,
+		foneOuvido: 10,
+		Pendrive: 17, 
+		CaixaAudio:8, 
+		Tablet: 5,
+		CarregadorPortatil: 15
+	};
+	const estoqueFinal = {};
+
+	const chaves = Object.keys(vendas);
+
+	console.log(chaves);
+	console.log(vendas);
+
+	mostrarEstoque(estoque,vendas);
+	console.log(estoqueFinal);
+
+	// estoqueFinal.celular = estoque.celular - vendas.celular;
+</script>
+</body>
+</html>
